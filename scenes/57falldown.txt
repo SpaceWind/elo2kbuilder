@@ -1,0 +1,76 @@
+#defines
+#name
+57falldown
+
+
+@.
+start
+part0
+part1
+falldown1
+pidrila
+canalization
+/.
+
+@start
+addSprite scene_57falldown_bg bg1
+addSprite ui_bg uibg
+addSprite hpbar_full hpb
+addSprite elobar_full elb
+addSprite kappa kappa1
+moveSprite kappa1 -100 110
+moveSprite uibg 0 525
+moveSprite hpb 0 525
+moveSprite elb 0 560
+animate walking kappa1 150 130 120 linear
+animation.walking.onEnd :part0
+playSound 2000
+/start
+
+
+
+@part0
+animate walking1 kappa1 320 160 140 linear
+animation.walking1.onEnd :part1
+/part0
+
+
+@part1
+removeSprite kappa1
+removeSprite elb
+mval pbv 1 0,15 0,4
+addProgressBar pb elobar.txt 0 560 pbv
+addSprite kappa_rotate kappa2
+setAnimation kappa2 go_right
+moveSprite kappa2 320 220
+animate falldown kappa2 625 455 250 linear
+animation.falldown.onEnd :falldown1
+playSound bones
+/part1
+
+
+@falldown1
+playSound atari_boom
+setAnimation kappa2 !stop
+waitcall 2000 :pidrila
+/falldown1
+
+@pidrila
+removeSprite kappa2
+addSprite kappa kappa3
+moveSprite kappa3 625 395
+setAnimation kappa3 !stop
+playSound pidrila
+:canalization
+/pidrila
+
+@canalization
+setAnimation kappa3 !start
+animate downin kappa3 690 520 100 linear
+set next map level1.txt
+/canalization
+
+
+
+
+

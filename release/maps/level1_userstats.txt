@@ -1,0 +1,113 @@
+#defines
+#name
+Level1: using userstats
+
+#leftleftbound
+350
+#leftrightbound
+450
+#toptopbound
+200
+#topbottombound
+480
+#smoothscrollingv
+6
+#smoothscrollingh
+10
+
+
+#scrollboundsleft
+#scrollboundstop
+#minscrolltop
+-2000
+#maxscrolltop
+0
+#minscrollleft
+0
+#maxscrollleft
+1532
+
+
+@.
+start
+/.
+
+
+@start
+set bwall_w 764
+set bwall_h 450
+set bwall_l 0
+set bwall_t 0
+//rendering bwalls
+addSprite lvl1_bwall bg1
+add bwall_l $bwall_w
+addSprite lvl1_bwall bg2
+moveSprite bg2 $bwall_l $bwall_t
+add bwall_l $bwall_w
+addSprite lvl1_bwall bg3
+moveSprite bg3 $bwall_l $bwall_t
+add bwall_l $bwall_w
+addSprite lvl1_bwall bg4
+moveSprite bg4 $bwall_l $bwall_t
+set bwall_l 0
+set bwall_t -450
+addSprite lvl1_bwall bg5
+moveSprite bg5 $bwall_l $bwall_t
+add bwall_l $bwall_w
+addSprite lvl1_bwall bg6
+moveSprite bg6 $bwall_l $bwall_t
+add bwall_l $bwall_w
+addSprite lvl1_bwall bg7
+moveSprite bg7 $bwall_l $bwall_t
+add bwall_l $bwall_w
+addSprite lvl1_bwall bg8
+moveSprite bg8 $bwall_l $bwall_t
+addSprite shit_luk sl1
+moveSprite sl1 1686 -326
+//rendering floor
+set fl_w 400
+set fl_l 0
+set fl_t 450
+addSprite lvl1_bfloor bf1
+moveSprite bf1 $fl_l $fl_t
+add fl_l $fl_w
+addSprite lvl1_bfloor bf2
+moveSprite bf2 $fl_l $fl_t
+add fl_l $fl_w
+addSprite lvl1_bfloor bf3
+moveSprite bf3 $fl_l $fl_t
+add fl_l $fl_w
+addSprite lvl1_bfloor bf4
+moveSprite bf4 $fl_l $fl_t
+add fl_l $fl_w
+addSprite lvl1_bfloor bf5
+moveSprite bf5 $fl_l $fl_t
+add fl_l $fl_w
+addSprite lvl1_bfloor bf6
+moveSprite bf6 $fl_l $fl_t
+add fl_l $fl_w
+addSprite lvl1_bfloor bf7
+moveSprite bf7 $fl_l $fl_t
+//gui objects
+addStaticSprite ui_bg uibg
+moveSprite uibg 0 525 269
+//rendering boxes
+set box boxn 0 128
+set box_s 128
+set box_l 0
+set box_t -243
+addObject box1 $boxn
+moveObject $box_l $box_t
+add box_t $box_s
+addObject box2 $boxn
+moveObject $box_l $box_t
+add box_l $box_s
+addObject box3 $boxn
+moveObject $box_l $box_t
+addobject box4 $boxn
+moveObject box4 384 397
+/start
+
+
+
+

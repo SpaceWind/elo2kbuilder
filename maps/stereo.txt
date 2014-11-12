@@ -1,0 +1,221 @@
+#defines
+#name
+stereo effect test area
+
+#leftleftbound
+350
+#leftrightbound
+450
+#toptopbound
+200
+#topbottombound
+480
+#smoothscrollingv
+6
+#smoothscrollingh
+10
+
+
+#scrollboundsleft
+#scrollboundstop
+#minscrolltop
+-2000
+#maxscrolltop
+0
+#minscrollleft
+-1500
+#maxscrollleft
+1532
+
+
+
+@.
+start
+end
+end2
+upgrade_boots
+setup_events
+setup_events_with_no_boots
+/.
+
+@start
+set bwall_w 764
+set bwall_h 450
+set objectIndex 0
+set c_l 0
+set c_t 0
+sub c_t $bwall_h
+sub c_l $bwall_w
+sub c_l $bwall_w
+//top walls
+addSprite lvl1_bwall bg$objectIndex
+moveSprite bg$objectIndex $c_l $c_t
+add c_l $bwall_w
+add objectIndex 1
+addSprite lvl1_bwall bg$objectIndex
+moveSprite bg$objectIndex $c_l $c_t
+add c_l $bwall_w
+add objectIndex 1
+addSprite lvl1_bwall bg$objectIndex
+moveSprite bg$objectIndex $c_l $c_t
+add c_l $bwall_w
+add objectIndex 1
+addSprite lvl1_bwall bg$objectIndex
+moveSprite bg$objectIndex $c_l $c_t
+add c_l $bwall_w
+add objectIndex 1
+addSprite lvl1_bwall bg$objectIndex
+moveSprite bg$objectIndex $c_l $c_t
+add c_l $bwall_w
+add objectIndex 1
+//bottomwalls
+set c_l 0
+sub c_l $bwall_w
+sub c_l $bwall_w
+add c_t $bwall_h
+//
+addSprite lvl1_bwall bg$objectIndex
+moveSprite bg$objectIndex $c_l $c_t
+add c_l $bwall_w
+add objectIndex 1
+addSprite lvl1_bwall bg$objectIndex
+moveSprite bg$objectIndex $c_l $c_t
+add c_l $bwall_w
+add objectIndex 1
+addSprite lvl1_bwall bg$objectIndex
+moveSprite bg$objectIndex $c_l $c_t
+add c_l $bwall_w
+add objectIndex 1
+addSprite lvl1_bwall bg$objectIndex
+moveSprite bg$objectIndex $c_l $c_t
+add c_l $bwall_w
+add objectIndex 1
+addSprite lvl1_bwall bg$objectIndex
+moveSprite bg$objectIndex $c_l $c_t
+add c_l $bwall_w
+add objectIndex 1
+//
+//
+set c_l -2400
+set c_t 450
+set floor_w 400
+set objectIndex 0
+//flooors [6+7] 13 shtuk
+addSprite lvl1_bfloor bf$objectIndex
+moveSprite bf$objectIndex $c_l $c_t
+add c_l $floor_w
+add objectIndex 1
+addSprite lvl1_bfloor bf$objectIndex
+moveSprite bf$objectIndex $c_l $c_t
+add c_l $floor_w
+add objectIndex 1
+addSprite lvl1_bfloor bf$objectIndex
+moveSprite bf$objectIndex $c_l $c_t
+add c_l $floor_w
+add objectIndex 1
+addSprite lvl1_bfloor bf$objectIndex
+moveSprite bf$objectIndex $c_l $c_t
+add c_l $floor_w
+add objectIndex 1
+addSprite lvl1_bfloor bf$objectIndex
+moveSprite bf$objectIndex $c_l $c_t
+add c_l $floor_w
+add objectIndex 1
+addSprite lvl1_bfloor bf$objectIndex
+moveSprite bf$objectIndex $c_l $c_t
+add c_l $floor_w
+add objectIndex 1
+addSprite lvl1_bfloor bf$objectIndex
+moveSprite bf$objectIndex $c_l $c_t
+add c_l $floor_w
+add objectIndex 1
+addSprite lvl1_bfloor bf$objectIndex
+moveSprite bf$objectIndex $c_l $c_t
+add c_l $floor_w
+add objectIndex 1
+addSprite lvl1_bfloor bf$objectIndex
+moveSprite bf$objectIndex $c_l $c_t
+add c_l $floor_w
+add objectIndex 1
+addSprite lvl1_bfloor bf$objectIndex
+moveSprite bf$objectIndex $c_l $c_t
+add c_l $floor_w
+add objectIndex 1
+addSprite lvl1_bfloor bf$objectIndex
+moveSprite bf$objectIndex $c_l $c_t
+add c_l $floor_w
+add objectIndex 1
+//
+//system objects
+//gui
+addStaticSprite ui_bg uibg
+moveSprite uibg 0 525 269
+//walls
+addobject box1 box 0 128
+moveObject box1 600 280
+addobject bb1 boombox
+moveobject bb1 600 216
+addobject box2 box 0 256
+moveObject box2 -1200 300
+addSprite action_item action1
+moveSprite action1 -1100 260
+//
+addSprite door1 exit
+moveSprite exit 2260 278
+addSprite door1 exit2
+moveSprite exit2 -1500 278 
+//liveobjects
+addObject kappa1 customkappa
+moveObject kappa1 180 269
+bindScrollingTo kappa1
+//soundobjects
+_loadsound bbmusic sounds\watrushka.mp3 true
+_bindsound bbmusic bb1 kappa1 380 550 900 1500
+setobjectAnimation bb1 playing
+_playsound bbmusic
+//events
+mapset _event_object kappa1
+:setup_events
+/start
+
+@setup_events
+onObjectRect $_event_object 2260 200 2360 500 :end
+onObjectRect $_event_object -1500 200 -1350 500 :end2
+onObjectRect $_event_object -1100 160 -1000 300 :upgrade_boots
+/setup_events
+
+@setup_events_with_no_boots
+onObjectRect $_event_object 2260 200 2360 500 :end
+onObjectRect $_event_object -1500 200 -1350 500 :end2
+/setup_events_with_no_boots
+
+@end
+set next map level1.txt
+_freeall
+done
+/end
+
+
+@end2
+set next map testlevel1.txt
+_freeall
+done
+/end2
+
+@upgrade_boots
+getObjectParam temp_left kappa1 left
+getObjectParam temp_top kappa1 top
+removeEvents
+unbindScrolling
+removeObject kappa1
+mapset kappa_sprite kappa+kappa_blue_boots
+mapset kappa_rotate_sprite kappa_rotate+kappa_rotate_blue_boots
+mapadd kappa_speed 100
+mapadd kappa_jump 100
+addObject kappa2 customkappa
+moveObject kappa2 $temp_left $temp_top
+removeSprite action1
+mapset _event_object kappa2
+:setup_events_with_no_boots
+bindScrollingTo kappa2
+/upgrade_boots

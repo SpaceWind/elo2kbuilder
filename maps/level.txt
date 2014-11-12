@@ -1,0 +1,24 @@
+map config
+.txt
+
+@start
+:subscene
+/start
+
+
+addObject name type //addObject kappa1 kappa
+moveObject name l t
+setobjectanimation name animationname
+setobjectanimation name "!start"/"!stop"
+animateobject objectname animatename dL dT speed 
+removeObject name
+onObjectRect objectname left top right bottom callsubmapdesc
+onMapScroll left top "more"/"less"/"equal" callsubmapdesc
+
+
+setDone
+
+
+@abc
+call abc
+/abc

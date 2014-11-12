@@ -1,0 +1,48 @@
+#defines
+#name
+testlevel
+
+/#holdscrollingtop
+/#holdscrollingleft
+/#leftleftbound
+/#leftrightbound
+/#toptopbound
+/#topbottombound
+/#startscrollleft
+/#startscroltop
+/bindScrollingTo name
+/unbindScrolling
+
+#holdscrollingtop
+#holdscrollingleft
+!
+
+
+@.
+start
+pidrila
+boom
+/.
+
+@start
+addSprite scene_57falldown_bg bg1
+addSprite ui_bg uibg
+addObject kappa1 kappa
+addSprite kappa kappa2
+moveSprite kappa2 -25 180
+animate kappafake kappa2 900 400 200 linear
+animation.kappafake.onEnd :boom 
+moveSprite uibg 0 525
+moveObject kappa1 20 30
+onObjectRect kappa1 700 0 900 525 :pidrila
+/start
+
+
+@pidrila
+playsound pidrila
+done
+/pidrila
+
+@boom
+playsound atari_boom
+/boom

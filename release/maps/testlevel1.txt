@@ -1,0 +1,138 @@
+#defines
+#name
+testlevel
+
+
+#leftleftbound
+350
+#leftrightbound
+450
+#toptopbound
+200
+#topbottombound
+480
+#smoothscrollingv
+5
+#smoothscrollingh
+12
+
+
+#scrollboundsleft
+#scrollboundstop
+#minscrolltop
+-1000
+#maxscrolltop
+0
+#minscrollleft
+0
+#maxscrollleft
+1300
+
+
+
+@.
+start
+pidrila
+boom
+hoholengages
+hoholleft
+hoholright
+openway
+/.
+
+@start
+addSprite lvl1_bwall bg1
+addSprite lvl1_bwall bg2
+moveSprite bg2 764 0 
+addSprite lvl1_bwall bg3
+moveSprite bg3 1528 0
+addSprite lvl1_bwall bg4
+moveSprite bg4 0 -450
+addSprite lvl1_bwall bg5
+moveSprite bg5 764 -450 
+addSprite lvl1_bwall bg6
+moveSprite bg6 1528 -450
+addSprite shit_luk luk1
+moveSprite luk1 1783 110
+//floor
+addSprite lvl1_bfloor bf1
+moveSprite bf1 0 450
+addSprite lvl1_bfloor bf2
+moveSprite bf2 400 450
+addSprite lvl1_bfloor bf3
+moveSprite bf3 800 450
+addSprite lvl1_bfloor bf4
+moveSprite bf4 1200 450
+addSprite lvl1_bfloor bf5
+moveSprite bf5 1600 450
+addSprite lvl1_bfloor bf6
+moveSprite bf6 2000 450
+addSprite lvl1_bfloor bf7
+moveSprite bf7 2400 450
+//system objects
+addobject box1 box 0 128
+moveObject box1 800 397
+addobject box3 box 0 128
+moveObject box3 1256 269
+addobject box4 box 0 128
+moveObject box4 1384 277
+addobject box5 box 0 128
+moveObject box5 1650 70
+addobject box6 box 0 128
+moveObject box6 1650 178
+addobject box7 box 0 128
+moveObject box7 1650 298
+addobject box8 box 0 128
+moveObject box8 1650 426
+addSprite action_item action1
+moveSprite action1 1300 169
+addStaticSprite ui_bg uibg
+moveSprite uibg 0 525 269
+addObject kappa1 customkappa
+moveObject kappa1 60 30
+bindScrollingTo kappa1
+onObjectRect kappa1 2200 0 2400 525 :pidrila
+onObjectRect kappa1 1600 0 1900 525 :hoholengages
+onObjectRect kappa1 1300 10 1500 200 :openway
+//addSprite aswerok as1
+/start
+
+@openway
+playsound atari_boom
+removeSprite action1
+animateObject box3 boxanimation 1256 -200 55
+/openway
+
+
+@pidrila
+set next map level1.txt
+removeSprite as1
+done
+/pidrila
+
+@hoholengages
+addSprite aswerok as1
+addSprite lvl1_bwall bg00
+moveSprite bg00 250 16
+//moveSprite aswer1 -100 485
+//setanimation as1 go_right
+//animate engagesright aswer1 1900 485 1200 linear
+//playsound hohol2
+//animation.engagesright.onend :hoholleft
+/hoholengages
+
+
+@hoholleft
+playsound hohol1
+setanimation aswer1 go_left
+animate hoholl aswer1 0 480 200 linear
+animation.hoholl.onend :hoholright
+/hoholleft
+
+
+@hoholright
+playsound hohol2
+setanimation aswer1 go_right
+animate hoholr aswer1 1940 488 200 linear
+animation.hoholr.onend :hoholleft
+/hoholright

@@ -1,0 +1,193 @@
+#defines
+#name
+mapname
+
+@.
+start
+/.
+
+@start
+set kappan_indexer 0
+set temp_left 0
+set temp_top 0
+addSprite kappa kappan$kappan_indexer
+add kappan_indexer 1
+add temp_top 50
+addSprite kappa kappan$kappan_indexer
+moveSprite kappan$kappan_indexer $temp_left $temp_top
+add kappan_indexer 1
+add temp_top 50
+addSprite kappa kappan$kappan_indexer
+moveSprite kappan$kappan_indexer $temp_left $temp_top
+add kappan_indexer 1
+add temp_top 50
+addSprite kappa kappan$kappan_indexer
+moveSprite kappan$kappan_indexer $temp_left $temp_top
+add kappan_indexer 1
+add temp_top 50
+addSprite kappa kappan$kappan_indexer
+moveSprite kappan$kappan_indexer $temp_left $temp_top
+add kappan_indexer 1
+add temp_top 50
+addSprite kappa kappan$kappan_indexer
+moveSprite kappan$kappan_indexer $temp_left $temp_top
+add kappan_indexer 1
+add temp_top 50
+addSprite kappa kappan$kappan_indexer
+moveSprite kappan$kappan_indexer $temp_left $temp_top
+add kappan_indexer 1
+add temp_top 50
+addSprite kappa kappan$kappan_indexer
+moveSprite kappan$kappan_indexer $temp_left $temp_top
+add kappan_indexer 1
+add temp_top 50
+addSprite kappa kappan$kappan_indexer
+moveSprite kappan$kappan_indexer $temp_left $temp_top
+add kappan_indexer 1
+add temp_left 40
+addSprite kappa kappan$kappan_indexer
+moveSprite kappan$kappan_indexer $temp_left $temp_top
+add kappan_indexer 1
+add temp_left 40
+addSprite kappa kappan$kappan_indexer
+moveSprite kappan$kappan_indexer $temp_left $temp_top
+add kappan_indexer 1
+add temp_left 40
+addSprite kappa kappan$kappan_indexer
+moveSprite kappan$kappan_indexer $temp_left $temp_top
+add kappan_indexer 1
+add temp_left 40
+addSprite kappa kappan$kappan_indexer
+moveSprite kappan$kappan_indexer $temp_left $temp_top
+add kappan_indexer 1
+add temp_left 40
+addSprite kappa kappan$kappan_indexer
+moveSprite kappan$kappan_indexer $temp_left $temp_top
+add kappan_indexer 1
+add temp_left 40
+addSprite kappa kappan$kappan_indexer
+moveSprite kappan$kappan_indexer $temp_left $temp_top
+add kappan_indexer 1
+add temp_left 40
+addSprite kappa kappan$kappan_indexer
+moveSprite kappan$kappan_indexer $temp_left $temp_top
+add kappan_indexer 1
+add temp_left 40
+addSprite kappa kappan$kappan_indexer
+moveSprite kappan$kappan_indexer $temp_left $temp_top
+add kappan_indexer 1
+sub temp_top 50
+addSprite kappa kappan$kappan_indexer
+moveSprite kappan$kappan_indexer $temp_left $temp_top
+add kappan_indexer 1
+sub temp_top 50
+addSprite kappa kappan$kappan_indexer
+moveSprite kappan$kappan_indexer $temp_left $temp_top
+add kappan_indexer 1
+sub temp_top 50
+addSprite kappa kappan$kappan_indexer
+moveSprite kappan$kappan_indexer $temp_left $temp_top
+add kappan_indexer 1
+sub temp_top 50
+addSprite kappa kappan$kappan_indexer
+moveSprite kappan$kappan_indexer $temp_left $temp_top
+add kappan_indexer 1
+sub temp_top 50
+addSprite kappa kappan$kappan_indexer
+moveSprite kappan$kappan_indexer $temp_left $temp_top
+add kappan_indexer 1
+sub temp_top 50
+addSprite kappa kappan$kappan_indexer
+moveSprite kappan$kappan_indexer $temp_left $temp_top
+add kappan_indexer 1
+sub temp_top 50
+addSprite kappa kappan$kappan_indexer
+moveSprite kappan$kappan_indexer $temp_left $temp_top
+add kappan_indexer 1
+sub temp_top 50
+addSprite kappa kappan$kappan_indexer
+moveSprite kappan$kappan_indexer $temp_left $temp_top
+add kappan_indexer 1
+sub temp_left 40
+addSprite kappa kappan$kappan_indexer
+moveSprite kappan$kappan_indexer $temp_left $temp_top
+add kappan_indexer 1
+sub temp_left 40
+addSprite kappa kappan$kappan_indexer
+moveSprite kappan$kappan_indexer $temp_left $temp_top
+add kappan_indexer 1
+sub temp_left 40
+addSprite kappa kappan$kappan_indexer
+moveSprite kappan$kappan_indexer $temp_left $temp_top
+add kappan_indexer 1
+sub temp_left 40
+addSprite kappa kappan$kappan_indexer
+moveSprite kappan$kappan_indexer $temp_left $temp_top
+add kappan_indexer 1
+sub temp_left 40
+addSprite kappa kappan$kappan_indexer
+moveSprite kappan$kappan_indexer $temp_left $temp_top
+add kappan_indexer 1
+sub temp_left 40
+addSprite kappa kappan$kappan_indexer
+moveSprite kappan$kappan_indexer $temp_left $temp_top
+add kappan_indexer 1
+sub temp_left 40
+addSprite kappa kappan$kappan_indexer
+moveSprite kappan$kappan_indexer $temp_left $temp_top
+add kappan_indexer 1
+sub temp_left 40
+addSprite kappa kappan$kappan_indexer
+moveSprite kappan$kappan_indexer $temp_left $temp_top
+set bw_indexer 0
+set temp_left 0
+set temp_top 0
+addSprite lvl1_bwall bw$bw_indexer
+add bw_indexer 1
+add temp_left 764
+addSprite lvl1_bwall bw$bw_indexer
+moveSprite bw$bw_indexer $temp_left $temp_top
+add bw_indexer 1
+add temp_left 764
+addSprite lvl1_bwall bw$bw_indexer
+moveSprite bw$bw_indexer $temp_left $temp_top
+add bw_indexer 1
+add temp_left 764
+addSprite lvl1_bwall bw$bw_indexer
+moveSprite bw$bw_indexer $temp_left $temp_top
+add bw_indexer 1
+add temp_top 450
+addSprite lvl1_bwall bw$bw_indexer
+moveSprite bw$bw_indexer $temp_left $temp_top
+add bw_indexer 1
+sub temp_left 764
+addSprite lvl1_bwall bw$bw_indexer
+moveSprite bw$bw_indexer $temp_left $temp_top
+add bw_indexer 1
+sub temp_left 764
+addSprite lvl1_bwall bw$bw_indexer
+moveSprite bw$bw_indexer $temp_left $temp_top
+add bw_indexer 1
+sub temp_left 764
+addSprite lvl1_bwall bw$bw_indexer
+moveSprite bw$bw_indexer $temp_left $temp_top
+animate firstkappa_right kappan0 1000 600 400 linear
+/start
+
+
+#leftleftbound
+0
+#leftrightbound
+0
+#toptopbound
+0
+#topbottombound
+0
+#minscrollleft
+0
+#maxscrollleft
+0
+#minscrolltop
+0
+#maxscrolltop
+0

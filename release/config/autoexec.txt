@@ -1,0 +1,16 @@
+_set kappa_spell_dash_combo 100- Q
+
+_set kappa_sprite kappa
+_set kappa_rotate_sprite kappa_rotate
+
+_set kappa_maxhp 50
+_set kappa_hp 50
+_set kappa_speed 250
+_set kappa_jump 600
+_set kappa_sdl 380
+_set kappa_sda 15
+_set kappa_acc 880
+_set kappa_damage 10
+_set kappa_elo 300
+
+

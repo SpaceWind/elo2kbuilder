@@ -1,0 +1,58 @@
+#defines
+#name
+Watrushka
+
+
+@.
+start
+kappagoesleft
+kappagoesright
+flyaway
+/.
+
+@start
+addStaticSprite ui_bg uibg
+moveSprite uibg 0 525
+addSprite lvl1_bwall bw1
+addSprite lvl1_bwall bw2
+moveSprite bw1 228 0
+moveSprite bw2 -536 0
+addSprite shit_luk luk1
+moveSprite luk1 483 110
+addSprite kappa kappa1
+moveSprite kappa1 860 435
+addSprite lvl1_bfloor bf1
+addSprite lvl1_bfloor bf2
+addSprite lvl1_bfloor bf3
+moveSprite bf1 700 450
+moveSprite bf2 300 450
+moveSprite bf3 -100 450
+setAnimation kappa1 go_left
+animate firstleft kappa1 580 435 115 linear
+animation.firstleft.onEnd :kappagoesleft
+playSoundAnd watrushka :flyaway
+/start
+
+
+@kappagoesleft
+setAnimation kappa1 go_left
+animate kappaleft kappa1 550 435 160 linear
+animation.kappaleft.onEnd :kappagoesright 
+/kappagoesleft
+
+@kappagoesright
+setAnimation kappa1 go_right
+animate kapparight kappa1 630 435 160 linear
+animation.kapparight.onEnd :kappagoesleft 
+/kappagoesright
+
+@flyaway
+playSound atari_boom
+setAnimation kappa1 go_right
+animate away kappa1 1000 -100 800 linear
+waitcall 1500 scenedone
+animation.away.onEnd scenedone
+/flyaway
+
+
+

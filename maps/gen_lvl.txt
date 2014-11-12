@@ -1,0 +1,72 @@
+#defines
+#name
+76h6yh
+
+@.
+start
+/.
+
+@start
+set left 0
+set top 0
+set kp_indexer 0
+set left 0
+set top 0
+addSprite kappa kp$kp_indexer
+setAnimation kp$kp_indexer go_right
+add kp_indexer 1
+add left 40
+addSprite kappa kp$kp_indexer
+moveSprite kp$kp_indexer $left $top
+add kp_indexer 1
+add left 40
+addSprite kappa kp$kp_indexer
+moveSprite kp$kp_indexer $left $top
+add kp_indexer 1
+add left 40
+addSprite kappa kp$kp_indexer
+moveSprite kp$kp_indexer $left $top
+add kp_indexer 1
+sub top 100
+addSprite kappa kp$kp_indexer
+moveSprite kp$kp_indexer $left $top
+add kp_indexer 1
+sub left 40
+addSprite kappa kp$kp_indexer
+moveSprite kp$kp_indexer $left $top
+add kp_indexer 1
+sub left 40
+addSprite kappa kp$kp_indexer
+moveSprite kp$kp_indexer $left $top
+add kp_indexer 1
+sub left 40
+addSprite kappa kp$kp_indexer
+moveSprite kp$kp_indexer $left $top
+/start
+#holdscrollingleft
+
+#holdscrollingtop
+
+
+
+#leftleftbound
+0
+#leftrightbound
+0
+#toptopbound
+0
+#topbottombound
+0
+#minscrollleft
+0
+#maxscrollleft
+0
+#minscrolltop
+0
+#maxscrolltop
+0
+
+#startscrollleft
+0
+#startscrolltop
+-100

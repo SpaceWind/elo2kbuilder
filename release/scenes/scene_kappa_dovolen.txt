@@ -1,0 +1,15 @@
+@.
+start
+music_loop
+/.
+
+@start
+addSprite kappa_dovolen s1
+:music_loop
+/start
+
+
+@music_loop
+PlaySoundAnd watrushka :music_loop
+/music_loop
+

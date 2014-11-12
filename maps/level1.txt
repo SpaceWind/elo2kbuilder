@@ -1,0 +1,218 @@
+#defines
+#name
+level1
+//#holdscrollingtop
+//#holdscrollingleft
+//#leftleftbound
+//#leftrightbound
+//#toptopbound
+//#topbottombound
+#startscrollleft
+3000
+#startscrolltop
+-1000
+//bindScrollingTo name
+//unbindScrolling
+//smoothscrollingv: max scrolling per iteration
+//amoothscrollingh 
+//#holdscrollingtop
+#leftleftbound
+350
+#leftrightbound
+450
+#toptopbound
+200
+#topbottombound
+480
+#smoothscrollingv
+6
+#smoothscrollingh
+10
+#scrollboundsleft
+#scrollboundstop
+#minscrolltop
+-2000
+#maxscrolltop
+0
+#minscrollleft
+0
+#maxscrollleft
+1532
+@.
+start
+lift
+tp1
+openway
+openway2
+openway3
+openway4
+endproc
+stop
+/.
+@stop
+//setanimation kbb !stop
+/stop
+@start
+//
+addSprite kappa+kappa_blue_boots kbb
+moveSprite kbb 180 424
+//waitcall 100 :stop
+//
+addSprite lvl1_bwall bg1
+addSprite lvl1_bwall bg2
+moveSprite bg2 764 0 
+addSprite lvl1_bwall bg3
+moveSprite bg3 1528 0
+addSprite lvl1_bwall bg4
+moveSprite bg4 2292 0
+addSprite lvl1_bwall bg5
+moveSprite bg5 0 -450
+addSprite lvl1_bwall bg6
+moveSprite bg6 764 -450
+addSprite lvl1_bwall bg7
+moveSprite bg7 1528 -450
+addSprite lvl1_bwall bg8
+moveSprite bg8 2292 -450
+addSprite shit_luk sl1
+moveSprite sl1 1686 -326
+//floor
+addSprite lvl1_bfloor bf1
+moveSprite bf1 0 450
+addSprite lvl1_bfloor bf2
+moveSprite bf2 400 450
+addSprite lvl1_bfloor bf3
+moveSprite bf3 800 450
+addSprite lvl1_bfloor bf4
+moveSprite bf4 1200 450
+addSprite lvl1_bfloor bf5
+moveSprite bf5 1600 450
+addSprite lvl1_bfloor bf6
+moveSprite bf6 2000 450
+addSprite lvl1_bfloor bf7
+moveSprite bf7 2400 450
+//system objects
+//gui
+addStaticSprite ui_bg uibg
+moveSprite uibg 0 525 269
+//walls
+addobject box1 box 0 128
+moveObject box1 0 -243
+addobject box2 box 0 128
+moveObject box2 0 -115
+addobject box3 box 0 128
+moveObject box3 128 -115
+addobject box4 box 0 128
+moveObject box4 384 397
+addobject box5 box 0 128
+moveObject box5 512 -115
+addobject box6 box 0 128
+moveObject box6 640 -115
+addobject box7 box 0 128
+moveObject box7 640 297
+addobject box8 box 0 128
+moveObject box8 768 288
+addobject box9 box 0 128
+moveObject box9 896 279
+addobject box10 box 0 128
+moveObject box10 1024 270
+addobject box11 box 0 128
+moveObject box11 1152 261
+//bigwall
+addobject box12 box 0 128
+moveObject box12 1408 397
+addobject box13 box 0 128
+moveObject box13 1408 269
+addobject box14 box 0 128
+moveObject box14 1408 141
+addobject box15 box 0 128
+moveObject box15 1408 13
+addobject box16 box 0 128
+moveObject box16 1408 -115
+addobject box17 box 0 128
+moveObject box17 1408 -243
+addobject box18 box 0 128
+moveObject box18 1408 -371
+addobject box19 box 0 128
+moveObject box19 1408 -499
+//-------------------------
+addobject box20 box 0 128
+moveObject box20 1536 13
+addobject box21 box 0 128
+moveObject box21 1664 13
+addobject box22 box 0 128
+moveObject box22 1792 13
+addobject box23 box 0 128
+moveObject box23 1920 13
+addobject box24 box 0 128
+moveObject box24 2048 13
+addobject box25 box 0 128
+moveObject box25 2176 13
+addobject box26 box 0 128
+moveObject box26 2304 13
+//-----------
+addobject box27 box 0 128
+moveObject box27 2304 -115
+addobject box28 box 0 128
+moveObject box28 2304 -243
+addobject box29 box 0 128
+moveObject box29 2304 -371
+//------------------------
+//{1152; 160; 1252; 260}
+addSprite action_item action1
+moveSprite action1 1166 161
+//{128; -360; 248; -220}
+addSprite action_item action2
+moveSprite action2 150 -343
+//{1408; -180; 1508; 0}
+addSprite action_item action3
+moveSprite action3 1540 -113
+//------------------------
+//door {1500; 200; 1700; 500}
+addSprite door1 exit
+moveSprite exit 1760 278
+//liveobjects
+addObject kappa1 customkappa
+moveObject kappa1 128 269
+bindScrollingTo kappa1
+//events
+onObjectRect kappa1 1152 160 1252 260 :lift
+onObjectRect kappa1 128 -360 248 -220 :tp1
+onObjectRect kappa1 1508 -180 1608 0 :openway
+onObjectRect kappa1 1700 200 1900 500 :endproc
+/start
+@openway
+playsound atari_boom
+removeSprite action3
+animateObject box17 lift1 1152 -243 200
+animateObject box16 lift2 1280 -115 100
+objectanimation.lift2.onend :openway2
+/openway
+@openway2
+animateObject box17 lift3 1152 13 200
+animateObject box16 lift4 1280 13 100
+objectAnimation.lift4.onEnd :openway3
+/openway2
+@openway3
+animateObject box17 lift5 1152 397 80
+animateObject box16 lift6 1280 397 80
+objectAnimation.lift6.onEnd :openway4
+/openway3
+@openway4
+playsound hohol1
+animateObject box13 lift7 1408 397 40
+animateObject box14 lift8 1408 13 40
+/openway4
+@lift
+playSound nebo
+removeSprite action1
+animateObject box11 lifting_up 1152 -120 150
+/lift
+@tp1
+playSound bones
+removeSprite action2
+moveObject kappa1 2000 -140
+/tp1
+@endproc
+set next map stereo.txt
+done
+/endproc

@@ -1,0 +1,48 @@
+#defines
+#name
+level1
+#leftleftbound
+350
+#toptopbound
+200
+#leftrightbound
+450
+#topbottombound
+480
+#minscrollleft
+0
+#minscrolltop
+-2000
+#maxscrollleft
+0
+#minscrolltop
+1532
+#scrollboundsleft
+#scrollboundstop
+#smoothscrollingh
+10
+#smoothscrollingv
+6
+@start
+addsprite lvl1_bwall  bg0
+movesprite bg0 0 -825
+addsprite lvl1_bwall  bg1
+movesprite bg1 764 -825
+addsprite lvl1_bwall  bg2
+movesprite bg2 1528 -825
+addsprite lvl1_bwall  bg3
+movesprite bg3 0 -375
+addsprite lvl1_bwall  bg4
+movesprite bg4 764 -375
+addsprite lvl1_bwall  bg5
+movesprite bg5 1528 -375
+addsprite lvl1_bwall  bg6
+movesprite bg6 0 75
+addsprite lvl1_bwall  huy0
+movesprite huy0 764 75
+addsprite lvl1_bwall  huy1
+movesprite huy1 1528 75
+/start
+@.
+start
+/.

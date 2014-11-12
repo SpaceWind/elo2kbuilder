@@ -1,0 +1,16 @@
+#mode
+alpha
+#color
+16777215
+#empty
+res\hpbar_empty.sprite\frames.bmp
+#full
+res\hpbar_full.sprite\frames.bmp
+#horizontal
+#left
+!
+#text
+#textprefix
+HP: 
+#fontcolor
+65535
